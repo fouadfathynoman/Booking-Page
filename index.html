@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Booking Page</title>
+    <link rel="icon" href="img/images.jpeg" type="image/y-icon">
+</head>
+<body>
+    <header class="contanier">
+        <div class="logo">
+            <img src="img/images.jpeg">
+        </div>
+        <nav>
+            <a href="#home">home</a>
+            <a href="#book-now">book now</a>
+            <a href="#contact-us">contact us</a>
+        </nav>
+    </header>
+    <main>
+        <article id="home" class="contanier">
+            <h1>hallo in <span>book now campany</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores quae ducimus rem impedit maiores laborum blanditiis aliquam voluptas perspiciatis esse sunt, odio et dolore perferendis cupiditate? Minima vel laboriosam est. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore perspiciatis culpa aliquam, minus similique, deserunt animi sequi maxime laborum reiciendis autem nostrum! Magni dicta, veniam debitis temporibus facere aut a?
+            Omnis cumque quibusdam consequuntur nam animi deserunt, deleniti, dignissimos nihil unde rem ipsa. Et molestias eaque magnam quidem? Voluptatum impedit dolor, nobis cumque exercitationem consequatur cupiditate est sint esse explicabo!</p>
+        </article >
+        <article id="book-now" class="contanier">
+            <form action="#" method="POST" id="bookingForm">
+                <h4>Booking Now</h4>
+                <label for="user">user name</label>
+                <input type="text" name="user" id="user" maxlength="30" placeholder="user name" required>
+
+                <label for="phone">phone</label>
+                <input type="tel" name="phone" id="phone" maxlength="13" placeholder="+201" required>
+
+                <label for="date">select a date</label>
+                <input type="date" name="date" id="date" required>
+
+                <label for="book">select a time</label>
+                <select name="book" id="book" required>
+                    <option selected id="special" style="display: none;">AM & PM</option>
+                    <optgroup label="AM">
+                        <option value="9:00 am">9:00 am</option>
+                        <option value="10:00 am">10:00 am</option>
+                        <option value="11:00 am">11:00 am</option>
+                    </optgroup>
+                    <optgroup label="PM">
+                        <option value="1:00 pm">1:00 pm</option>
+                        <option value="2:00 pm">2:00 pm</option>
+                        <option value="3:00 pm">3:00 pm</option>
+                    </optgroup>
+                </select>
+
+                <input type="reset" value="reset" id="send">
+                <input type="submit" value="save" id="send">
+            </form>
+        </article>
+    </main>
+    <footer>
+            <div class="social-buttom">
+                <p>contact us</p>
+                <div class="icons">
+                    <i>
+                        <a class="fab fa-github" href="https://github.com/fo2sh821" title="github"></a>
+                    </i>
+                    <i>
+                        <a class="fab fa-facebook" href="https://www.facebook.com/profile.php?id=61560857005093" title="faceook"></a>
+                    </i>
+                    <i>
+                        <a class="fab fa-instagram" href="https://www.instagram.com/fouadfathynoman" title="instagram"></a>
+                    </i>
+                    <i>
+                        <a class="fab fa-whatsapp" href="https://wa.me/201010285436" title="whatsapp"></a>
+                    </i>
+                </div>
+            </div>
+            <div class="mylogo">
+                <a href="https://fo2sh821.github.io/My-Protofil/" title="Fo2sh Protofil">desgin by fo2sh</a>
+                &nbsp;&copy;
+                <span id="currentYear"></span>
+            </div>
+        </footer>
+
+        <!-- Java Script code -->
+         <script src="js/main.js"></script>
+
+</body>
+</html>

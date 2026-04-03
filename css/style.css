@@ -1,0 +1,358 @@
+/* Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: "Cairo", sans-serif;
+    text-transform: capitalize;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box
+}
+/* html {
+    scroll-behavior: smooth;
+    background-color: rgba(238, 238, 238, 0.34);
+} */
+.contanier {
+    min-width: 350px;
+    padding: 7px;
+    margin: 20px auto 20px;
+    overflow: hidden
+}
+a {
+    text-decoration: none;
+    color: black
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+main {
+    width: calc(100% - 5%);
+    margin: auto;
+    margin: 3em auto
+}
+article {
+    width: 100%;
+    min-height: 10vh;
+    overflow: hidden
+}
+
+/* small */
+@media (min-width: 768px) {
+    .container {width: 750px}
+}
+  /* Medium */
+@media (min-width: 992px) {
+    .container {width: 970px}
+}
+  /* Large */
+@media (min-width: 1200px) {
+    .container {width: 1170px}
+}
+  /* Global Rules */
+
+    /* controls */
+:root {
+    --mainColor: #E9DFC3;
+    --mainWidth: 100%;
+    --mainDisplay: flex;
+    --mainBackground-color: #eee;
+    --mainBackground-button: #020024
+}
+  /* controls */
+
+/* Body */
+body {
+    color: #E9DFC3;
+    min-width: 350px;
+    width: calc(var(--mainWidth) - 0.5%);
+    margin: auto;
+    background: #020024
+    /* background: linear-gradient(180deg,#0118D8 50%, #578FCA 100%); */
+
+}
+
+/* Header */
+header {
+    width: calc(var(--mainWidth) - 10%);
+    margin: auto !important;
+    display: flex;
+    min-height: 15vh;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    border-bottom: var(--mainColor) solid 1px
+}
+header .logo {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+header .logo img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    overflow: hidden
+}
+header nav {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px
+}
+header nav a {
+    color: var(--mainColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    gap: 12px;
+    font-size: 22px;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0
+}
+header nav a::before {
+    content: "";
+    width: 100%;
+    background-color: var(--mainColor);
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    transform: translateX(-110%);
+    transition: transform 0.5s
+}
+header nav a:hover::before {
+    transform: translateX(0%);
+    transition: transform 0.5s;
+    overflow: hidden
+}
+
+/* article */
+article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center
+}
+#home h1 span {
+    color: #5eff009d;
+    font-size: 22px
+}
+#home p {
+    text-wrap: balance;
+    font-weight: 100;
+    line-height: 1.5
+}
+form {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 15px;
+    background: rgba(255,255,255,0.2);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.1)
+}
+form h4 { 
+    line-height: 1.5;
+    margin: 7px;
+    margin-bottom: 12px;
+    width: 100%;
+    text-align: center
+}
+form label {
+    display: flex;
+    width: calc(var(--mainWidth) - 30%);
+    margin: auto;
+    padding: 4px;
+    justify-content: flex-start;
+    align-items: center
+}
+form input, form select  {
+    padding: 4px;
+    width: calc(var(--mainWidth) - 30%);
+    outline: none;
+    justify-content: flex-start;
+    text-transform: lowercase
+}
+form input#send, form select {text-transform: uppercase}
+#send {
+    margin: 7px;
+    padding: 7px;
+    width: 40%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-radius: 12px
+}
+#send:hover {
+    background-color: var(--mainBackground-button);
+    color: var(--mainBackground-color);
+    border: 1px solid var(--mainBackground-color);
+    transition: 2s
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    color: #eee;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 7vh
+}
+footer .social-buttom {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+    align-items: center
+}
+footer .social-buttom p { 
+    font-size: 14px;
+    text-align: center;
+    width: 40%
+}
+footer .social-buttom .icons {
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 200px;
+    justify-content: center;
+    gap: 10px;
+    align-items: center
+}
+footer .social-buttom .icons i .fab {
+    color: var(--mainBackground-color);
+    display: flex;
+    margin-left: 4px;
+    font-size: 14px
+}
+footer .mylogo {
+    font-family: Playfair Display;
+    font-size: 14px;
+    text-align: center;
+    text-transform: capitalize
+}
+footer .mylogo a {
+    color: var(--mainBackground-color);
+    text-decoration: underline
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* less than 768px */
+@media (max-width: 768px) {
+    header nav {
+        width: 60%;
+        justify-content: flex-end
+    }
+    header nav a {font-size: 12px}
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    header {height: 15vh}
+    header nav {
+        width: 40%;
+        justify-content: space-between;
+    }
+    #home h1 {font-size: 22px}
+    #home p {
+        width: calc( var(--mainWidth) - 8% );
+        font-size: 20px
+    }
+    form {width: calc(var(--mainWidth) - 45%)}
+    form label, form h4 {font-size: 20px}
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    header {height: 15vh}
+    header nav {
+        width: 40%;
+        justify-content: space-between
+    }
+    header nav a, #home h1, #home h1 span {font-size: 23px}
+    #home p {
+        width: calc( var(--mainWidth) - 8% );
+        font-size: 21px
+    }
+    form {width: calc(var(--mainWidth) - 45%)}
+    form label, form input, form select {width: calc(var(--mainWidth) - 50%)}
+    footer {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    header {height: 15vh}
+    header nav {
+        width: 30%;
+        justify-content: space-between;
+    }
+    header nav a, #home h1, #home h1 span {font-size: 24px}
+    #home p {
+        width: calc( var(--mainWidth) - 12% );
+        font-size: 20px
+    }
+    form {width: calc(var(--mainWidth) - 50%)}
+    footer {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center
+    }
+}
+
+/* Extra - Large devices (extre - large desktops, 1900px and up) */
+@media (min-width: 1900px) {
+    header {height: 14vh}
+    header nav {
+        width: 30%;
+        justify-content: space-between;
+    }
+    header nav a, #home h1, #home h1 span {font-size: 24px}
+    #home h1 {
+        text-align: start;
+        width: calc(var(--mainWidth) - 10%)
+    }
+    #home p {
+        width: calc( var(--mainWidth) - 10% );
+        font-size: 22px
+    }
+    form {width: calc(var(--mainWidth) - 60%)}
+    footer {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center
+    }
+}
